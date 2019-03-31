@@ -42,6 +42,7 @@ var colorYellow = "#ffff00";
 var colorBlue = "#0000ff";
 
 var curColor = colorRed;
+var clickColor = new Array();
 
 canvas.addEventListener("keypress", checkKeyPress, false);
 
@@ -66,7 +67,7 @@ function checkKeyPress(key){
 	if (key.keyCode == "89") {
 		curColor = colorYellow;	}
 	
-	context.strokeStyles = this.curColor
+	context.strokeStyle = this.curColor;
 
 }
 
