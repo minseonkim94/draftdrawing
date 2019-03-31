@@ -11,13 +11,15 @@ context.lineWidth = radius*2
 
 var putPoint = function(e) {
 	if(dragging){
-		context.beginPath();
-		context.lineWidth = "5";
 		context.strokeStyle = "#ff0000";
-		context.moveTo(e.clientX, e.clientY);
-		context.lineTo(e.clientX, e.clientY);
-		context.lineTo(e.clientX, e.clientY);
-		context.stroke();
+				context.lineTo(e.clientX, e.clientY);
+				context.stroke();
+				context.beginPath();
+				context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
+		    context.fillStyle="#ff0000";
+				context.fill();
+				context.beginPath();
+				context.moveTo(e.clientX, e.clientY);
 
 }}
 
@@ -58,7 +60,7 @@ function checkKeyPress(key){
 	}
 	if (key.keyCode == "89") {
 		curColor = colorYellow;	}
-	
+
 	context.strokeStyle = curColor;
 
 }
