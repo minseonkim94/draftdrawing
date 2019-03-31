@@ -19,11 +19,11 @@ context.lineWidth = radius*2
 var putPoint = function(e) {
 	if(dragging){
 		context.lineTo(e.clientX, e.clientY);
-context.strokeStyle = curColor;
+		context.strokeStyle = curColor;
 		context.stroke();
 		context.beginPath();
 		context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
-context.fillStyle = curColor;
+		context.fillStyle = curColor;
 		context.fill();
 		context.beginPath();
 		context.moveTo(e.clientX, e.clientY);
