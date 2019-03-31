@@ -36,6 +36,7 @@ var engage = function(e) {
 
 var disengage = function() {
 	dragging = false;
+	context.beginPath();
 }
 
 canvas.addEventListener('mousedown', engage);
