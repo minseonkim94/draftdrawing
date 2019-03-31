@@ -46,14 +46,6 @@ var clickColor = new Array();
 
 canvas.addEventListener("keypress", checkKeyPress, false);
 
-function addClick(x, y, dragging)
-{
-  clickX.push(x);
-  clickY.push(y);
-  clickDrag.push(dragging);
-  clickColor.push(curColor);
-}
-
 function checkKeyPress(key){
 	if (key.keyCode == "66") {
 		curColor = colorBlue;
@@ -70,11 +62,6 @@ function checkKeyPress(key){
 	context.strokeStyle = this.curColor;
 
 }
-
-
-
-
-
 
 function addClick(x, y, dragging)
 {
