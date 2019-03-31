@@ -11,9 +11,9 @@ context.lineWidth = radius*2
 
 var putPoint = function(e) {
 	if(dragging){
+		context.strokeStyle = "#ff0000";
 		context.lineTo(e.clientX, e.clientY);
 		context.stroke();
-		context.strokeStyle = "#ff0000";
 		context.beginPath();
 		context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
 		context.fill();
