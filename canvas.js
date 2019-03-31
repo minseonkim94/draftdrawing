@@ -14,8 +14,9 @@ var putPoint = function(e) {
 		context.beginPath();
 		context.lineWidth = "5";
 		context.strokeStyle = "#ff0000";
-		context.lineTo(e.clientX, e.clientY);
 		context.moveTo(e.clientX, e.clientY);
+		context.lineTo(e.clientX, e.clientY);
+		context.lineTo(e.clientX, e.clientY);
 		context.stroke();
 
 }}
