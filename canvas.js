@@ -59,7 +59,7 @@ function checkKeyPress(key){
 	if (key.keyCode == "89") {
 		curColor = colorYellow;	}
 	
-	context.strokeStyle = this.curColor;
+	context.strokeStyle = curColor;
 
 }
 
