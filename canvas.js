@@ -3,6 +3,7 @@ var context = canvas.getContext("2d");
 
 var radius = 5;
 var dragging = false;
+var color = false;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
