@@ -13,6 +13,7 @@ var putPoint = function(e) {
 	if(dragging){
 		context.lineTo(e.clientX, e.clientY);
 		context.stroke();
+		context.strokestyle = #ff0000;
 		context.beginPath();
 		context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
 		context.fill();
