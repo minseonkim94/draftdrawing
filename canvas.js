@@ -63,33 +63,3 @@ function checkKeyPress(key){
 	context.strokeStyle = curColor;
 
 }
-
-function addClick(x, y, dragging)
-{
-  clickX.push(x);
-  clickY.push(y);
-  clickDrag.push(dragging);
-  clickColor.push(curColor);
-}
-
-function redraw(){
-  context.lineJoin = "round";
-  context.lineWidth = 5;
-
-  for(var i=0; i < clickX.length; i++)
-  {
-    context.beginPath();
-    if(clickDrag[i] && i){
-      contex.moveTo(clickX[i-1], clickY[i-1]);
-    }else{
-      context.moveTo(clickX[i]-1, clickY[i]);
-    }
-    context.lineTo(clickX[i], clickY[i]);
-    context.closePath();
-    context.strokeStyle = curColor;
-    context.stroke();
-  }
-}
-
-
-
