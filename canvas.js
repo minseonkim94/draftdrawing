@@ -3,13 +3,13 @@ var context = canvas.getContext("2d");
 
 var radius = 5;
 var dragging = false;
-var color = false;
 
 var colorRed = "#ff0000";
 var colorGreen = "#008000";
 var colorYellow = "#ffff00";
 var colorBlue = "#0000ff";
 
+var color = colorRed;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -42,9 +42,6 @@ var disengage = function() {
 canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mousemove', putPoint);
 canvas.addEventListener('mouseup', disengage);
-
-var curColor = colorRed;
-var clickColor = new Array();
 
 canvas.addEventListener("keypress", checkKeyPress, false);
 
