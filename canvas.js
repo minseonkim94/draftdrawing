@@ -65,12 +65,14 @@ function checkKeyPress(key){
 	}
 	if (key.keyCode == "89") {
 		curColor = colorYellow;	}
+	
+	context.strokeStyles = this.curColor
+
 }
 
 
 
 
-/*
 
 
 function addClick(x, y, dragging)
@@ -95,21 +97,10 @@ function redraw(){
     }
     context.lineTo(clickX[i], clickY[i]);
     context.closePath();
-    context.strokeStyle = clickColor[i];
+    context.strokeStyle = curColor;
     context.stroke();
   }
 }
 
 
 
-
-	/*
-
-
-
-
-}
-
-
-
-*/
