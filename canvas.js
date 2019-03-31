@@ -11,14 +11,12 @@ context.lineWidth = radius*2
 
 var putPoint = function(e) {
 	if(dragging){
+		context.beginPath();
 		context.strokeStyle = "#ff0000";
 		context.lineTo(e.clientX, e.clientY);
-		context.stroke();
-		context.beginPath();
-		context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
-		context.fill();
-		context.beginPath();
 		context.moveTo(e.clientX, e.clientY);
+		context.stroke();
+
 }}
 
 var engage = function(e) {
@@ -28,7 +26,6 @@ var engage = function(e) {
 
 var disengage = function() {
 	dragging = false;
-	context.beginPath();
 }
 
 canvas.addEventListener('mousedown', engage);
